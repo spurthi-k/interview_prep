@@ -5,61 +5,42 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-success-100: #49de50;
-  --color-success-200: #42c748;
-  --color-destructive-100: #f75353;
-  --color-destructive-200: #c44141;
+  --color-success-100: #00CFFF;     /* Neon Cyan */
+  --color-success-200: #5E72EB;     /* Blue-Violet */
 
-  --color-primary-100: #dddfff;
-  --color-primary-200: #cac5fe;
+  --color-destructive-100: #1E1F3F; /* Dark Indigo */
+  --color-destructive-200: #14152C; /* Deeper Indigo */
 
-  --color-light-100: #d6e0ff;
-  --color-light-400: #6870a6;
-  --color-light-600: #4f557d;
-  --color-light-800: #24273a;
+  --color-primary-100: #E6F8FF;     /* Light Cyan */
+  --color-primary-200: #B3EEFF;     /* Pale Cyan */
 
-  --color-dark-100: #020408;
-  --color-dark-200: #27282f;
-  --color-dark-300: #242633;
+  --color-light-100: #C1C7D0;       /* Light Gray */
+  --color-light-400: #7F8FA4;       /* Mid Gray */
+  --color-light-600: #5E72EB;       /* Accent Blue */
+  --color-light-800: #1E1F3F;       /* Deep Accent */
 
-  --font-mona-sans: "Mona Sans", sans-serif;
+  --color-dark-100: #14152C;        /* Very dark base */
+  --color-dark-200: #0F111A;        /* Background dark */
+  --color-dark-300: #0A0B13;        /* Shadow dark */
 
-  --bg-pattern: url("public/pattern.png");
+  --bg-pattern: url("public/pattern.jpg");
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --primary: oklch(0.8 0.23 210);            /* Neon Cyan */
+  --primary-foreground: oklch(0.15 0.05 240);/* Darker Indigo */
+  --secondary: oklch(0.95 0.12 230);         /* Pale Cyan */
+  --secondary-foreground: oklch(0.25 0.05 250);
+  --accent: oklch(0.8 0.18 265);             /* Violet Blue */
+  --accent-foreground: oklch(0.2 0.04 270);
+  --destructive: oklch(0.3 0.05 260);        /* Dim Indigo */
+  --success: oklch(0.75 0.2 215);            /* Bright Cyan-Blue */
+
+  --chart-1: oklch(0.8 0.23 210);  /* Neon Cyan */
+  --chart-2: oklch(0.75 0.18 230); /* Lighter Blue */
+  --chart-3: oklch(0.7 0.17 250);  /* Violet-Tinted Blue */
+  --chart-4: oklch(0.9 0.14 265);  /* Light Indigo */
+  --chart-5: oklch(0.7 0.15 270);  /* Blue-Violet */
 }
 
 .dark {
@@ -258,7 +239,7 @@
   }
 
   .auth-layout {
-    @apply flex items-center justify-center mx-auto max-w-7xl min-h-screen max-sm:px-4 max-sm:py-8;
+    @apply flex-center items-center justify-center mx-auto max-w-7xl min-h-screen max-sm:px-4 max-sm:py-8;
   }
 
   .root-layout {
@@ -294,24 +275,24 @@
   }
 }
 
-@utility dark-gradient {
-  @apply bg-gradient-to-b from-[#1A1C20] to-[#08090D];
-}
-
 @utility border-gradient {
   @apply bg-gradient-to-b from-[#4B4D4F] to-[#4B4D4F33];
 }
 
 @utility pattern {
-  @apply bg-[url('/pattern.png')] bg-top bg-no-repeat;
+  @apply bg-[url('/pattern.jpg')] bg-top bg-no-repeat;
+}
+
+@utility dark-gradient {
+  @apply bg-gradient-to-b from-[#1E1F3F] to-[#0F111A];
 }
 
 @utility blue-gradient-dark {
-  @apply bg-gradient-to-b from-[#171532] to-[#08090D];
+  @apply bg-gradient-to-b from-[#B3EEFF] to-[#1E1F3F];
 }
 
 @utility blue-gradient {
-  @apply bg-gradient-to-l from-[#FFFFFF] to-[#CAC5FE];
+  @apply bg-gradient-to-l from-[#E6F8FF] to-[#00CFFF];
 }
 
 @utility flex-center {

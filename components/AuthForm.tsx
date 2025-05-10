@@ -78,16 +78,16 @@ const AuthForm = ({ type } : { type: FormType }) => {
     const isSignIn = type === 'sign-in';
 
     return (
-        <div className="card-border lg:min-w-[566px]">
-            <div className="flex fle-col gap-6 card py-14 px-10">
-                <div className="flex flex-row gap-2 justify-center">
+        <div className="min-h-screen flex items-center justify-center ">
+            <div className="flex flex-col gap-6 py-14 px-10">
+                <div className="flex flex-col items-center gap-2 justify-center">
                     <Image
                         src="logo.svg"
                         alt="logo"
-                        height={32}
-                        width={38}
+                        height={36}
+                        width={42}
                     />
-                    <h2 className="text-primary-100">Sprepwise</h2>
+                    <h2 className="text-primary-100">Sprepare</h2>
                 </div>
                 <h3>Practice job interview with AI</h3>
 

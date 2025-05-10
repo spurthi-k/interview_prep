@@ -121,7 +121,7 @@ const Agent = ({
             await vapi.start(process.env.NEXT_PUBLIC_VAPI_WORKFLOW_ID!, {
                 variableValues: {
                     username: userName,
-                    userid: userId,
+                    userid: userId ,
                 },
             });
         } else {
@@ -152,7 +152,7 @@ const Agent = ({
                 <div className="card-interviewer">
                     <div className="avatar">
                         <Image
-                            src="/ai-avatar.png"
+                            src="/ai-avatar.svg"
                             alt="profile-image"
                             width={65}
                             height={54}
@@ -167,7 +167,7 @@ const Agent = ({
                 <div className="card-border">
                     <div className="card-content">
                         <Image
-                            src="/user-avatar.png"
+                            src="/user-avatar.svg"
                             alt="profile-image"
                             width={539}
                             height={539}

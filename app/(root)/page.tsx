@@ -1,9 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
+
 import { Button } from "@/components/ui/button";
 import InterviewCard from "@/components/InterviewCard";
+
 import { getCurrentUser } from "@/lib/actions/auth.action";
-import {getInterviewsByUserId, getLatestInterviews,} from "@/lib/actions/general.action";
+import {
+    getInterviewsByUserId,
+    getLatestInterviews,
+} from "@/lib/actions/general.action";
 
 async function Home() {
     const user = await getCurrentUser();
@@ -33,8 +38,8 @@ async function Home() {
                 <Image
                     src="/robot.png"
                     alt="robo-dude"
-                    width={400}
-                    height={400}
+                    width={600}
+                    height={600}
                     className="max-sm:hidden"
                 />
             </section>
